@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Views.TransctionPage" 
+             xmlns:ViewModels="clr-namespace:Banking.ViewModels"
+             Title="Transction" BackgroundColor="#0044cc"
+             >
+    <StackLayout Margin="10" Padding="15" BackgroundColor="White" >
+        <ContentPage.BindingContext>
+            <ViewModels:TransctionViewModel/>
+        </ContentPage.BindingContext>
+
+        <ListView ItemsSource="{Binding TransctionList}" HasUnevenRows="True" SeparatorColor="#0044cc" HorizontalOptions="CenterAndExpand"  >
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell >
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding TransctionDate,StringFormat='{0:MMMM dd, yyyy hh:mm tt}' }" FontSize="12" TextColor="#0044cc"></Label>
+                        
+                        <StackLayout Orientation="Vertical" >
+                                <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Amount,StringFormat='Amount: {0:C2}'}" FontSize="10"></Label>
+                                <Label Text="{Binding Type,StringFormat='Type: {0:N}'}" FontSize="10"></Label>
+                                </StackLayout>
+                                <Label Text="{Binding Description}" FontSize="8"></Label>
+                        </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

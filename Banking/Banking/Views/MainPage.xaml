@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Banking"
+             x:Class="Banking.MainPage" Title="Welcome To ABC Bank" BackgroundColor="#0044cc" >
+
+    <StackLayout Margin="10" Padding="5" BackgroundColor="White" >
+
+        
+            <Grid Padding="20" ColumnSpacing="10" RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            <Image Source="logo.png" HorizontalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" />
+            <Label Text="ABC Bank" Grid.Row="1" TextColor="Red" FontSize="20" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="View Balance" BackgroundColor="#1a8cff" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" Clicked="ViewTransctionButton_OnClicked"></Button>
+            <Button Text="View Transction" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1a8cff" TextColor="White" Clicked="ViewTransctionButton_OnClicked"></Button>
+            </Grid>
+    </StackLayout>
+
+            
+      
+
+
+
+
+    
+    
+
+</ContentPage>
