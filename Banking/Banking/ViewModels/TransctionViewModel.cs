@@ -26,8 +26,13 @@ namespace Banking.ViewModels
         }
         public TransctionViewModel()
         {
+            InitilizeDataAsync();
+        }
+
+        public async Task InitilizeDataAsync()
+        {
             var transctionService = new TransctionService();
-            TransctionList = transctionService.GetTransctions();
+            TransctionList =await transctionService.GetTransctionsAsync();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
