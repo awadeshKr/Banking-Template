@@ -21,7 +21,7 @@
                 </Grid.ColumnDefinitions>
             <Image Source="logo.png" HorizontalOptions="Center" Grid.Row="0" Grid.ColumnSpan="2" WidthRequest="100" HeightRequest="100" />
             <Label Text="ABC Bank" Grid.Row="1" TextColor="Red" FontSize="20" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand"/>
-            <Button Text="View Balance" BackgroundColor="#1a8cff" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" Clicked="ViewTransctionButton_OnClicked"></Button>
+            <Button Text="View Balance" BackgroundColor="#1a8cff" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" Clicked="ViewBalanceButton_OnClicked"></Button>
             <Button Text="View Transction" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1a8cff" TextColor="White" Clicked="ViewTransctionButton_OnClicked"></Button>
             </Grid>
     </StackLayout>

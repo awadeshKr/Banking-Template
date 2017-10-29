@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Views.BalancePage"
+             xmlns:ViewModels="clr-namespace:Banking.ViewModels"
+             Title="Balance" BackgroundColor="#0044cc"
+             >
+    <StackLayout Margin="10" Padding="15" BackgroundColor="White"  >
+        <ContentPage.BindingContext>
+            <ViewModels:BalanceViewModel/>
+        </ContentPage.BindingContext>
+        <Frame Padding="5" Margin="5" VerticalOptions="CenterAndExpand">
+        <Grid Padding="20" ColumnSpacing="10" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Label Text="Available Balance" Grid.Row="0" Grid.Column="0" FontSize="18" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Text="{Binding Balance.Amount,StringFormat='{0:C2}'}" HorizontalOptions="CenterAndExpand" FontSize="15"></Label>
+        </Grid>
+        </Frame>
+       
+    </StackLayout>
+</ContentPage>

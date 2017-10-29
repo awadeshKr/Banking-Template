@@ -19,5 +19,10 @@ namespace Banking
         {
             await Navigation.PushAsync(new Banking.Views.TransctionPage(),true);
         }
+        private async void ViewBalanceButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Banking.Views.BalancePage(), true);
+        }
+        
     }
 }
